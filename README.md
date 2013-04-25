@@ -41,10 +41,20 @@ ngb
 install
 ```
 
+
+* 配置sublime2 编辑器，使其自动切换GOPATH
+
+* 需要先自行安装gocode和GoSublime
+
+mac 进入交互模式后直接输入subl mac
+linux 还没有实现
+
+
+
 shell里面的命令可以都可以在ngb都可以使用
 
 
 # NEW
 ===
 
-发布0.1版本
+发布0.1.1版本
