@@ -52,12 +52,12 @@ def install():
   pkg_list = read_json("./project.json")["packages"]
   temp_path = os.getenv("HOME") + "/.ngb"
   os.putenv("GOPATH", temp_path)
+  for name in pkg_list:
+    print "install " + name
+    os.system("go get " + name)
   try:
-    for name in pkg_list:
-      print "install " + name
-      os.system("go get " + name)
-      for path in os.listdir(temp_path + "/src"):
-        os.symlink(temp_path+"/src/" + path, "./src/" + path)
+    for path in os.listdir(temp_path + "/src"):
+      os.symlink(temp_path+"/src/" + path, "./src/" + path)
   except:
     pass
   os.putenv("GOPATH",os.getcwd())
