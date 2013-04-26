@@ -6,6 +6,7 @@ import os
 import json
 from string import Template
 from plugins import sublime
+from plugins import gocode
 
 def return_path():
   return os.path.split(os.path.realpath(__file__))[0]
@@ -58,8 +59,10 @@ def install():
       for path in os.listdir(temp_path + "/src"):
         os.symlink(temp_path+"/src/" + path, "./src/" + path)
   except:
-    print "没有新的包需要安装"
-    return
+    pass
+  os.putenv("GOPATH",os.getcwd())
+  for name in pkg_list:
+    os.system("go install " + name)
   print "all is ok"
 
 
@@ -118,5 +121,7 @@ if __name__ == '__main__':
   elif len(sys.argv) == 3 and sys.argv[1] == "subl":
     setting(sys.argv[2])
     sys.exit(1)
+  elif len(sys.argv) == 3 and sys.argv[1] == "code":
+    gocode.install()
   a = Ngb()
   a.cmdloop()
