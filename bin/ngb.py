@@ -55,11 +55,12 @@ def install():
   for name in pkg_list:
     print "install " + name
     os.system("go get " + name)
-  try:
-    for path in os.listdir(temp_path + "/src"):
+  
+  for path in os.listdir(temp_path + "/src"):
+    try:
       os.symlink(temp_path+"/src/" + path, "./src/" + path)
-  except:
-    pass
+    except:
+      pass
   os.putenv("GOPATH",os.getcwd())
   for name in pkg_list:
     os.system("go install " + name)
