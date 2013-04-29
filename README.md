@@ -44,7 +44,9 @@ install
 
 * 配置sublime2 编辑器，使其自动切换GOPATH
 
-* 需要先自行安装gocode和GoSublime
+* 使用ngb install gocode 进行安装gocode
+
+* 安装GoSublime
 
 mac 进入交互模式后直接输入subl mac
 linux 还没有实现
@@ -57,8 +59,7 @@ shell里面的命令可以都可以在ngb都可以使用
 # NEW
 ===
 
-发布0.1.1版本
+发布0.1.2版本
 
 # todo
-- 自动安装gocode
 - 优化对sublime的支持
