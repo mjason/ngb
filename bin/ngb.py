@@ -122,7 +122,8 @@ if __name__ == '__main__':
   elif len(sys.argv) == 3 and sys.argv[1] == "subl":
     setting(sys.argv[2])
     sys.exit(1)
-  elif len(sys.argv) == 3 and sys.argv[1] == "code":
+  elif len(sys.argv) == 3 and sys.argv[1] == "install" and sys.argv[2] == "gocode":
     gocode.install()
+    sys.exit(1)
   a = Ngb()
   a.cmdloop()
