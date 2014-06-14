@@ -129,7 +129,7 @@ shell里面的命令可以都可以在ngb都可以使用
 
 # NEW
 ===
-
+发布0.2.0 版本，采用ruby重写，地址：[new_ngb](https://github.com/mjason/new_ngb)
 发布0.1.2版本
 
 # todo
